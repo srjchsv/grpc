@@ -1,0 +1,60 @@
+{
+  "id":  "bb200905-5889-4463-9495-33e14d898f7f",
+  "brand":  "Vostro",
+  "name":  "Dell",
+  "cpu":  {
+    "brand":  "Intel",
+    "name":  "Core i7-9750H",
+    "number_cores":  5,
+    "number_threads":  10,
+    "min_ghz":  2.1652085710227658,
+    "max_ghz":  4.467971522704783
+  },
+  "ram":  {
+    "value":  "53",
+    "unit":  "GIGABYTE"
+  },
+  "gpus":  [
+    {
+      "brand":  "Nvidia",
+      "name":  "GTX 1660-Ti",
+      "min_ghz":  1.1087796959366538,
+      "max_ghz":  1.2229077488492206,
+      "memory":  {
+        "value":  "6",
+        "unit":  "GIGABYTE"
+      }
+    }
+  ],
+  "storages":  [
+    {
+      "driver":  "HDD",
+      "memory":  {
+        "value":  "4",
+        "unit":  "TERABYTE"
+      }
+    },
+    {
+      "driver":  "HDD",
+      "memory":  {
+        "value":  "6",
+        "unit":  "TERABYTE"
+      }
+    }
+  ],
+  "screen":  {
+    "size_inch":  14.798849,
+    "resolution":  {
+      "width":  2368,
+      "height":  1332
+    },
+    "panel":  "OLED"
+  },
+  "keyboard":  {
+    "layout":  "QWERTZ"
+  },
+  "weight_kg":  2.7192034556278264,
+  "price_usd":  3202.951571510746,
+  "release_year":  2017,
+  "updated_at":  "2022-08-18T19:34:42.205732645Z"
+}
