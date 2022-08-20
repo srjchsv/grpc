@@ -17,7 +17,12 @@ import (
 
 func main() {
 	serversAddress := flag.String("address", "", "the servers address")
+	maxPriceUsd := flag.Float64("price", 3000, "max price")
+	minCpuCores := flag.Uint64("cores", 4, "min cpu cores")
+	minCpuGhz := flag.Float64("ghz", 2.5, "min cpu ghz")
+	minRam := flag.Uint64("ram", 8, "min ram")
 	flag.Parse()
+	
 	log.Printf("dial server %v", *serversAddress)
 
 	conn, err := grpc.Dial(*serversAddress, grpc.WithTransportCredentials(insecure.NewCredentials()))
@@ -30,10 +35,10 @@ func main() {
 		createLaptop(laptopClient)
 	}
 	filter := &pb.Filter{
-		MaxPriceUsd: 3000,
-		MinCpuCores: 4,
-		MinCpuGhz:   2.5,
-		MinRam:      &pb.Memory{Value: 8, Unit: pb.Memory_GIGABYTE},
+		MaxPriceUsd: *maxPriceUsd,
+		MinCpuCores: uint32(*minCpuCores),
+		MinCpuGhz:   *minCpuGhz,
+		MinRam:      &pb.Memory{Value: *minRam, Unit: pb.Memory_GIGABYTE},
 	}
 
 	SearchLaptop(laptopClient, filter)
